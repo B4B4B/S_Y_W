@@ -19,7 +19,7 @@ async def must_join_channel(bot: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"عـذرا عليك الاشتراك في قناه جمثون اولا",
+                    f"- عذرا عزيزي يجب عليك الانضمام لهذه القناة لكي تتمكن من استخدامي :[القناة.]({link})",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("اضغط هنا", url=link)]
