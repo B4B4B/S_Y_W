@@ -28,7 +28,7 @@ if __name__ == "__main__":
     except AccessTokenInvalid:
         raise Exception("عـذرا توكـن البـوت غيـر صالـح")
     uname = app.get_me().username
-    print(f"@{uname} Started Successfully!")
+    print(f"@{uname} اشتغل بنجاح  ✓!")
     idle()
     app.stop()
-    print("Bot stopped. Alvida!")
+    print("تم ايقاف البوت  ×")

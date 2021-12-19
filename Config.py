@@ -6,7 +6,7 @@ if ENVIRONMENT:
     try:
         API_ID = int(os.environ.get('API_ID', 0))
     except ValueError:
-        raise Exception("Your API_ID is not a valid integer.")
+        raise Exception("- عذرا يجب ان يكون الايبب ايدي ارقام")
     API_HASH = os.environ.get('API_HASH', None)
     BOT_TOKEN = os.environ.get('BOT_TOKEN', None)
     DATABASE_URL = os.environ.get('DATABASE_URL', None)

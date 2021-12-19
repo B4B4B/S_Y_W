@@ -6,7 +6,7 @@ class Data:
     START = """
 - مرحبا بك في بوت جمثون
 
-من هذا البوت يمكنك استخراج كود تيرمكس بسهولة وبسرعة و بدون مشاكل اختر امر الاستخراج في الاسفل واكمل العملية  ، 
+من هذا البوت يمكنك استخراج كود تيرمكس او كود بايروجرام بسهولة وبسرعة و بدون مشاكل اختر امر الاستخراج في الاسفل واكمل العملية  ، 
 
 @JMTHON
     """
@@ -23,14 +23,12 @@ class Data:
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("• بدء الاستخراج •", callback_data="generate")],
-        [InlineKeyboardButton("• قناة جمثون •", url="https://t.me/jmthon")],
         [
-            InlineKeyboardButton("• اوامر البوت •", callback_data="help"),
-            InlineKeyboardButton("• حول البوت •", callback_data="about")
+            InlineKeyboardButton("• بدء الاستخراج  •", callback_data="generate")
+            InlineKeyboardButton("• كيفية الاستخدام  •", callback_data="help"),
         ],
+        [InlineKeyboardButton(" • قناة السورس •", url="https://t.me/JMTHON")],
     ]
-
 
     # Help Message
     HELP = """ 
@@ -43,14 +41,14 @@ class Data:
 /start 
  لتشغـيل البـوت
 /generate 
-لبـدء استخـراج كود تيرمكس
+لبـدء استخـراج كود بايروجرام او تيرمكس
 """
 
     # About Message
     ABOUT = """
-بوت استخراج كود تيرمكس 
+بوت استخراج كود تيرمكس او كود بايروجرام
 
-وهـو عبـارة عن بوت بسيط للمساعـدة في استخـراج كـود تيرمكس بسهولة وبأمان تام  ومساعدك في عمليه تنصيب سورس جمثون 
+وهـو عبـارة عن بوت بسيط للمساعـدة في استخـراج كـود تيرمكس/بايروجرام بسهولة وبأمان تام  ومساعدك في عمليه تنصيب سورس جمثون 
 
 قناة السورس  : 
 @Jmthon
