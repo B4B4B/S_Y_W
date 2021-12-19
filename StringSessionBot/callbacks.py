@@ -43,7 +43,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             "يجب اختيار نوعية الكود الذي تريد استخراجه \nالتيليثون  - يعني كود تيرمكس \nبايروجرام  - كود بايروجرام",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("بايروجرام", callback_data="pyrogram"),
-                InlineKeyboardButton("nالتيليثون", callback_data="telethon")
+                InlineKeyboardButton("التيليثون", callback_data="telethon")
             ]])
         )
       elif query in ["pyrogram", "telethon"]:
