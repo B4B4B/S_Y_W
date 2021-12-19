@@ -95,7 +95,7 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "** هذا هو الكود الخاص بك ** \n\n`{}` \n\n ملاحظة  :  لا تقم بمشاركه هذا الكود الى اي شخص حتى لو انه من مطورين السورس\n CH:  @Jmthon".format("TELETHON" if telethon else "PYROGRAM", string_session)
+    text = "{} jmthon session \n\n`{}` \n\n ملاحظة  :  لا تقم بمشاركه هذا الكود الى اي شخص حتى لو انه من مطورين السورس\n CH:  @Jmthon".format("TELETHON" if telethon else "PYROGRAM", string_session)
     await client.send_message("me", text)
     await client.disconnect()
     await phone_code_msg.reply("تم بنجاح الكـود يـرجى التأكد من الرسـائل المحـفوظة \n\n CH:  @JMTHON".format("telethon" if telethon else "pyrogram"))
