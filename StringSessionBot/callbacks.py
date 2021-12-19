@@ -2,6 +2,9 @@ from Data import Data
 from pyrogram import Client
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from StringSessionBot.generate import generate_session, ERROR_MESSAGE
+
+
+# Callbacks
 @Client.on_callback_query()
 async def _callbacks(bot: Client, callback_query: CallbackQuery):
     user = await bot.get_me()
@@ -34,19 +37,19 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="**هذه هي اوامر البوت المتاحه**\n" + Data.HELP,
+            text="**- هذه هي قائمه استخدامي**\n" + Data.HELP,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
     elif query == "generate":
         await callback_query.message.reply(
-            "يجب اختيار نوعية الكود الذي تريد استخراجه \nالتيليثون  - يعني كود تيرمكس \nبايروجرام  - كود بايروجرام",
+            "الرجاء اختار نوع المكتبه لاستخراج الكود الخاص بها",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("بايروجرام", callback_data="pyrogram"),
-                InlineKeyboardButton("التيليثون", callback_data="telethon")
+                InlineKeyboardButton("تيليثون", callback_data="telethon")
             ]])
         )
-      elif query in ["pyrogram", "telethon"]:
+    elif query in ["pyrogram", "telethon"]:
         await callback_query.answer()
         try:
             if query == "pyrogram":
