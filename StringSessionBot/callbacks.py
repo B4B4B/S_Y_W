@@ -38,7 +38,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
-   elif query == "generate":
+    elif query == "generate":
         await callback_query.message.reply(
             "يجب اختيار نوعية الكود الذي تريد استخراجه \nالتيليثون  - يعني كود تيرمكس \nبايروجرام  - كود بايروجرام",
             reply_markup=InlineKeyboardMarkup([[
@@ -46,7 +46,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 InlineKeyboardButton("nالتيليثون", callback_data="telethon")
             ]])
         )
-     elif query in ["pyrogram", "telethon"]:
+      elif query in ["pyrogram", "telethon"]:
         await callback_query.answer()
         try:
             if query == "pyrogram":
