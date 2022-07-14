@@ -98,7 +98,7 @@ async def generate_session(bot, msg, telethon=False):
     text = "{} jmthon session \n\n`{}` \n\n ملاحظة  :  لا تقم بمشاركه هذا الكود الى اي شخص حتى لو انه من مطورين السورس\n CH:  @Jmthon".format("TELETHON" if telethon else "PYROGRAM", string_session)
     await client.send_message("me", text)
     await client.disconnect()
-    await phone_code_msg.reply("تم بنجاح الكـود يـرجى التأكد من الرسـائل المحـفوظة \n\n CH:  @JMTHON".format("telethon" if telethon else "pyrogram"))
+    await phone_code_msg.reply("تم بنجاح الكـود يـرجى التأكد من الرسـائل المحـفوظة \n\n CH:  @S_Y_W".format("telethon" if telethon else "pyrogram"))
 
 async def cancelled(msg):
     if "/cancel" in msg.text:
